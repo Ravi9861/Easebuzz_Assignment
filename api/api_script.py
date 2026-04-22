@@ -25,7 +25,7 @@ def fetch_posts():
         with open("api/data/first_5_posts.json", "w") as f:
             json.dump(posts[:5], f, indent=4)
 
-        print("✅ API validation successful and file saved.")
+        print("API validation successful and file saved.")
 
     except Exception as e:
-        print(f"❌ Error: {e}")
+        print(f" Error: {e}")

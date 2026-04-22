@@ -4,7 +4,7 @@ from utils.schema import PostSchema
 
 BASE_URL = "https://jsonplaceholder.typicode.com"
 
-# ✅ Response Time Test
+
 def test_response_time(api_client):
     start = time.time()
     response = api_client.get(f"{BASE_URL}/posts")
@@ -23,7 +23,7 @@ def test_schema_validation(api_client):
         PostSchema(**post)
 
 
-# ✅ Parameterized Test
+
 @pytest.mark.parametrize("endpoint", ["posts", "comments", "users"])
 def test_multiple_endpoints(api_client, endpoint):
     response = api_client.get(f"{BASE_URL}/{endpoint}")
